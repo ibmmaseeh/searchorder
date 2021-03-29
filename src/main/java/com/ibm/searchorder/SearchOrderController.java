@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 
-
 @RestController
 public class SearchOrderController {
 	
@@ -27,11 +26,11 @@ public class SearchOrderController {
 	List<Order> getOrders(){
 		return orderService.getOrders();
 	}
-	
-	
-	
-	
-	
+
+	@GetMapping("/order/{id}") 
+	Optional<Order> getOrderbyId(@PathVariable("id") String orderId){
+		return orderService.getOrderbyId(orderId);
+	}
 	
 	
 	

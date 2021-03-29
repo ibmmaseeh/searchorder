@@ -12,8 +12,11 @@ public class OrderService {
 	SearchOrderRepository searchorderRepository;
 
 	public List<Order> getOrders() {
-		// TODO Auto-generated method stub
 		return searchorderRepository.findAll();
+	}
+
+	public Optional<Order> getOrderbyId(String orderId) {
+		return searchorderRepository.findById(orderId);
 	}
 
 
