@@ -16,5 +16,10 @@ public class OrderService {
 		return searchorderRepository.findAll();
 	}
 
+	public Optional<Order> getOrderbyId(String orderId) {
+		// TODO Auto-generated method stub
+		return searchorderRepository.findById(orderId);
+	}
+
 
 }
